@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-22T17:14:34.393746" rpa="false" schemaversion="5">
+<suite id="s1" name="Test1" source="C:\Users\anumj\PyCharmMiscProject\Test1.robot">
+<test id="s1-t1" name="firsttestcase" line="4">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-22T17:14:34.677884" level="INFO">Hello World</msg>
+<arg>Hello World</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-22T17:14:34.677549" elapsed="0.000475"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-22T17:14:34.679060" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-22T17:14:34.678717" elapsed="2.420795"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-22T17:14:39.103015" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-22T17:14:37.102173" elapsed="2.001024"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-22T17:14:39.104021" elapsed="2.218656"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Loop: ${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-22T17:14:41.323621" elapsed="0.000411"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-11-22T17:14:41.323460" elapsed="0.000680"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Loop: ${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-22T17:14:41.324399" elapsed="0.000319"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-11-22T17:14:41.324292" elapsed="0.000518"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Loop: ${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-22T17:14:41.325050" elapsed="0.000324"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-11-22T17:14:41.324948" elapsed="0.000516"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Loop: ${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-22T17:14:41.325696" elapsed="0.000310"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-11-22T17:14:41.325594" elapsed="0.000501"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Loop: ${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-22T17:14:41.326331" elapsed="0.000322"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-11-22T17:14:41.326229" elapsed="0.000513"/>
+</iter>
+<var>${i}</var>
+<value>5</value>
+<status status="PASS" start="2025-11-22T17:14:41.323073" elapsed="0.003732"/>
+</for>
+<status status="PASS" start="2025-11-22T17:14:34.676271" elapsed="6.650869"/>
+</test>
+<test id="s1-t2" name="Validate Successful Login" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-22T17:14:41.328502" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-22T17:14:41.328321" elapsed="2.167115"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-11-22T17:14:43.509313" level="INFO">${title} = Google</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-11-22T17:14:43.495810" elapsed="0.013552"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-22T17:14:43.509967" level="INFO">${expected_title} = Google</msg>
+<var>${expected_title}</var>
+<arg>Google</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-22T17:14:43.509680" elapsed="0.000344"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-11-22T17:14:43.510571" elapsed="0.000267"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-22T17:14:43.511116" elapsed="2.217965"/>
+</kw>
+<status status="PASS" start="2025-11-22T17:14:41.327809" elapsed="4.402451"/>
+</test>
+<status status="PASS" start="2025-11-22T17:14:34.396218" elapsed="11.336858"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test1" id="s1" pass="2" fail="0" skip="0">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
