@@ -1,0 +1,26 @@
+# Git ignore rules 
+# Python cache
+__pycache__/
+*.pyc
+
+# Robot Framework logs
+log.html
+output.xml
+report.html
+
+# WebDriver logs
+geckodriver*.log
+chromedriver*.log
+
+# Screenshots
+*.png
+
+# Excel/CSV data files
+*.xlsx
+*.csv
+
+# PyCharm settings
+.idea/
+
+# Virtual environment
+venv/
